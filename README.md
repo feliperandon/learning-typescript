@@ -18,7 +18,7 @@ This doc will mark my learning in TypeScript while trying to use it in a React a
 ### Array with Type
 - number[] - const ids: **number[]** = [1, 2, 3, 4, 5]
 - string[] - const names: **string[]** = ["Felipe", "Neymar", "Caçarato"]
-- boolean[] - const bool: **booleans[]** = [true, false, false, true]
+- boolean[] - const bool: **boolean[]** = [true, false, false, true]
 
 
 ## Tuples
