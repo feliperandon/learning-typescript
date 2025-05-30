@@ -26,9 +26,21 @@ Defines a structure of elements, where you have to put them in a exact order
 - const person: [string, number] = ["Felipe", 200] // Right
 - const person: [string, number] = [200, "Felipe"] // Wrong
 
-## Tuples List
+### Tuples List
 const people: [number, string][] = [
 [1, "Felipe"],
 [2, "Caçarato"],
 [3, "Ai Papai"],
 ]
+
+## Type Assertion
+Its a way to override TypeScript type inference. Basically telling TypeScript that we know better the type of a variable.
+**Syntax**
+1. Angle-Bracket syntax (do not work in JSX)
+   - const productName: any = "Hat"
+   - let itemId = \<string>productName
+
+2. **as** syntax (better way)
+   - const productName: any = "Hat"
+   - let itemId = productName as string
+   
