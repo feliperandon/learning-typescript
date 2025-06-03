@@ -44,3 +44,8 @@ Its a way to override TypeScript type inference. Basically telling TypeScript th
    - const productName: any = "Hat"
    - let itemId = productName as string
    
+## Intersection
+When we want it to be a type or another
+- const productId: **string | number | boolean** = "1"
+- const data: **string | number** = "Neymar"
+- const numOrBool: **number | boolean** = true
