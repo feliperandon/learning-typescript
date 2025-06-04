@@ -133,3 +133,80 @@ Saturday
 Sunday
 
 ```
+
+## Object Types
+It is a way to create objects that determine its props and its types
+
+```
+type User = {
+   firstName: string;
+   age: number;
+   email: string;
+   password?: string // ? means optional, making it string | undefined
+}
+
+const user: User = {
+   firstName: "Neymar",
+   age: 33,
+   email: "neymarjr@cs2.com"
+}
+```
+
+We can put type inside a type. Functions aswell
+```
+type Order = {
+   productId: string;
+   price: number;
+}
+
+type User = {
+	firstName: string;
+	age: number;
+	email: string;
+	password?: string
+	orders: Order[]; // object type Order array
+	register(): string // func
+}
+
+const user: User = {
+	firstName: "Neymar",
+	age: 33,
+	email: "neymarjr@cs2.com",
+	orders: [{productId: "book", price: 200]},
+	register() {
+	return "Santos";
+}
+
+```
+
+Symbol ? and !  
+? - Optional prop  
+! - Can't be null or undefined, even tho the prop can accept undefined.  
+
+### Union Type
+```
+type Author = {
+	books: string[];
+};
+
+type User = {
+	firstName: string;
+	age: number;
+	email: string;
+	password?: string
+	orders: Order[]; // object type Order array
+	register(): string // func
+}
+
+const author: Author & User = {
+	age: 2,
+	books: ["O Livro"],
+	email: "neymarcontato@yahoo.com.br",
+	orders: [],
+	firstName: "Neymar",
+	register() {
+	return "Santos FC"
+	},
+};
+
+```
