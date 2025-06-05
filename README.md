@@ -210,3 +210,40 @@ const author: Author & User = {
 };
 
 ```
+## Interface
+```
+interface UserInterface {
+	readonly firstName: string; // only read, type doesnt have this functionality
+	email: string;
+}
+
+const emailUser: UserInterface = {
+	email: "neymar@gmail.com",
+	firstName: "Neymar",
+}
+
+interface AuthorInterface {
+	books: string[]
+}
+
+const newAuthor: UserInterface & AuthorInterface = {
+	email: "diretoriasantosfc@gmail.com",
+	firstName: "Neymar Pai",
+	books: []
+}
+```
+
+Interfaces are more recommended to define a structure of an object, whilst type is more recommended to define more complex data, ex: user data. Use type for: primitives, unions, intersections, tuples, and even simple object shapes when extension isnt needed
+
+```
+interface User {
+  name: string;
+  age: number;
+}
+
+const user: User = { name: "Alice", age: 25 }; // ✅ Right
+
+// Doesnt work with primitives, tuplas and union types
+interface Status = "loading" | "success" | "error"; // ❌ Erro: interfaces are object only
+interface Coordinates = [number, number]; // ❌ Erro: interfaces dont support tuples
+```
