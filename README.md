@@ -247,3 +247,31 @@ const user: User = { name: "Alice", age: 25 }; // ✅ Right
 interface Status = "loading" | "success" | "error"; // ❌ Erro: interfaces are object only
 interface Coordinates = [number, number]; // ❌ Erro: interfaces dont support tuples
 ```
+## Function
+In TypeScript we can type a function, its params and return
+
+```
+const sum (x, y) = return x + y
+// Simple func that sum two numbers.
+```
+
+```
+interface MathFunc {
+   (x: number, y: number): number
+}
+
+const sum: MathFunc = (x, y) => {
+   return x + y
+}
+
+```
+
+### Void
+When func doesnt return nothing, no value, you can specify as **void**
+
+```
+const log = (message: string): void => {
+  console.log(message)
+}
+
+```
