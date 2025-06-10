@@ -275,3 +275,57 @@ const log = (message: string): void => {
 }
 
 ```
+
+## Generics
+Allows you to be more dynamic in functions, assigning a type that you want it to be, instead of any, for example.  
+
+**Any**
+```
+const returnValue = (value: any) => value // 
+
+const message = returnValue("Hello World") // message's type = any
+const count = returnValue(5) // count's type = any
+
+```
+Using **Generic**
+```
+const returnValue = <T>(value: T): T => value
+
+const message = returnValue<string>("Hello World") // message's type = string
+const count = returnValue<number>(5) // count's type = number 
+```
+
+The letter T (which you can name whatever you want) is basically a placeholder, turning into a type that I want it to be at that moment. In this case, it turned into a string and afterwards a number  
+You can use how many letter you need
+```
+function identity <T,U>(value: T, message: U) : T {
+	console.log(message)
+	return value;
+}
+```
+
+**Array**
+```
+function getFirstValueFromArray<Type>(array: Type[]) {
+	return array[0]
+}
+
+const firstValueFromStringArray = getFirstValueFromArray<string>(["1", "2"])
+const firstValueFromNumberArray = getFirstValueFromArray<number>([10, 20])
+```
+
+### Promises
+When fetching an API, make sure to type the expected response from it, in this case, I am expecting an id, number and email.
+```
+type User = {
+  id: number;
+  name: string;
+  email: string;
+};
+
+const fetchUser = async (): Promise<User> => {
+  const res = await fetch(api);
+  const data: User = await res.json();
+  return data;
+};
+```
