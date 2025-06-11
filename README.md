@@ -8,6 +8,22 @@ This doc will mark my learning in TypeScript while trying to use it in a React a
 
 - **Type Inference**: TS identifies the type for us
 
+  
+## Content
+- [Primitive Types](#primitive-types)
+- [Array with Type](#array-with-type)
+- [Tuples](#tuples)
+- [Tuples List](#tuples-list)
+- [Type Assertion](#type-assertion)
+- [Intersection](#intersection)
+- [Enums](#enums)
+- [Object Types](#object-types)
+- [Union Type](#union-type)
+- [Interface](#interface)
+- [Function](#function)
+- [Void](#void)
+- [Generics](#generics)
+
 ## Primitive Types
 ```
 number - let age: **number** = 650
