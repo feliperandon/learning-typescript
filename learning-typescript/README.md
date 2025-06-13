@@ -1,6 +1,6 @@
 ## Typing useState
 
-useState's type is already explicit, unless you use "null", complex objects, empty array and uniom type
+useState's type is already explicit, unless you use "null", complex objects, empty array and union type
 
 ```
 const [name, setName] = useState<string>("");

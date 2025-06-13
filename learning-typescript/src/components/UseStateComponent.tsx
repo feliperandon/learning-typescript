@@ -12,7 +12,7 @@ type Product = {
   name: string;
 };
 
-const useStateComponent = () => {
+const UseStateComponent = () => {
   // 1nd Example
   const [name, setName] = useState<string>("");
 
@@ -64,4 +64,4 @@ const useStateComponent = () => {
   );
 };
 
-export default useStateComponent;
+export default UseStateComponent;
